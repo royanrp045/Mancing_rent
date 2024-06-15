@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;700&family=Poppins:wght@300;400;500&display=swap");
+
+:root {
+  --lg-font: "Kaisei Tokumin", serif;
+  --sm-font: "Poppins", sans-serif;
+  --pink: #0395c8;
+}
+body {
+  font-family: var(--sm-font);
+}
+
+/* button */
+.bg-primary {
+  background-color: var(--pink) !important;
+}
+
+.btn:not(.nav-btns button) {
+  background-color: #fff;
+  color: rgb(85, 85, 85);
+  padding: 10px 28px;
+  border-radius: 25px;
+  border: 1px solid rgb(85, 85, 85);
+}
+.btn:not(.nav-btns button):hover {
+  background-color: var(--pink);
+  color: #fff;
+  border-color: var(--pink);
+}
+
+/* text color */
+.text-primary {
+  color: var(--pink) !important;
+}
+
+.navbar {
+  -webkit-box-shadow: 0 3px 9px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 9px 3px rgba(0, 0, 0, 0.1);
+}
+.navbar-brand img {
+  width: 30px;
+}
+.navbar-brand span {
+  letter-spacing: 2px;
+  font-family: var(--lg-font);
+}
+.nav-link:hover {
+  color: var(--pink) !important;
+}
+.nav-item {
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);
+}
+.nav-item .active {
+  color: var(--pink) !important;
+}
+
+.welcome-text {
+  margin-right: 10px;
+  line-height: 35px;
+}
+@media (max-width: 991.98px) {
+  .nav-btns .btn {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+}
+
+/* header */
+#header {
+  background: url(../images/header.png) top/cover no-repeat;
+}
+
+.carousel-inner h1 {
+  font-size: 60px;
+  font-family: var(--lg-font);
+}
+.carousel-item .btn {
+  border-color: #000000 !important;
+}
+.carousel-item .btn:hover {
+  border-color: var(--pink) !important;
+}
+
+/* title */
+.title h2::before {
+  position: absolute;
+  content: "";
+  width: 4px;
+  height: 50px;
+  background-color: var(--pink);
+  left: -20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* special */
+.special-img {
+  width: 75%;
+  height: 0;
+  padding-bottom: 100%; /* Ini menjaga rasio aspek tetap 1:1 */
+  position: relative;
+  overflow: hidden;
+}
+.special-img span {
+  top: 20px;
+  right: 20px;
+}
+.special-list .btn {
+  padding: 8px 20px !important;
+}
+.special-img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+/* collection */
+.active-filter-btn {
+  background-color: var(--pink) !important;
+  color: #fff !important;
+  border-color: var(--pink) !important;
+}
+.filter-button-group .btn:hover {
+  color: #fff !important;
+}
+.collection-img span {
+  top: 20px;
+  right: 20px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+}
+.border {
+  background-color: #0395c8;
+  border-radius: 20px;
+}
+.img-col {
+  width: 100%;
+  height: 235px;
+  padding-top: 40px;
+}
+
+.img-col img {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.3s;
+  object-fit: contain;
+}

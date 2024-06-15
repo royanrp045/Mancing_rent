@@ -1,5 +1,7 @@
 <?php
 session_start();
+require '../functions/connect.php';
+$product = query("SELECT * FROM product")
 ?>
 
 <!DOCTYPE html>
@@ -92,182 +94,37 @@ session_start();
 <!-- end of navbar -->
 
     <!-- collection -->
-    <section id="collection" class="py-5">
-      <div class="container">
-        <div class="title text-center">
-          <h2 class="position-relative d-inline-block">New Collection</h2>
+  <section id="collection" class="py-5">
+    <div class="container">
+      <div class="row g-0">
+        <div class="d-flex flex-wrap justify-content-center mt-5 filter-button-group">
+          <button type="button" class="btn m-2 text-dark active-filter-btn" data-filter="*">All</button>
+          <button type="button" class="btn m-2 text-dark" data-filter=".rods">Rods</button>
+          <button type="button" class="btn m-2 text-dark" data-filter=".reels">Reels</button>
+          <button type="button" class="btn m-2 text-dark" data-filter=".float">Float</button>
         </div>
-
-        <div class="row g-0">
-          <div
-            class="d-flex flex-wrap justify-content-center mt-5 filter-button-group"
-          >
-            <button
-              type="button"
-              class="btn m-2 text-dark active-filter-btn"
-              data-filter="*"
-            >
-              All
-            </button>
-            <button type="button" class="btn m-2 text-dark" data-filter=".best">
-              Rods
-            </button>
-            <button
-              type="button"
-              class="btn m-2 text-dark"
-              data-filter=".reels"
-            >
-              Reels
-            </button>
-            <button
-              type="button"
-              class="btn m-2 text-dark"
-              data-filter=".float"
-            >
-              Float
-            </button>
-          </div>
-
-          <div class="collection-list mt-4 row gx-0 gy-3">
-            <div class="col-md-6 col-lg-4 col-xl-3 p-2 best">
+        <div class="collection-list mt-4 row gx-0 gy-3">
+          <?php foreach ($product as $row) : ?>
+            <div class="col-md-6 col-lg-4 col-xl-3 p-2 <?= strtolower($row['kategori']); ?>">
               <div class="border">
                 <div class="collection-img position-relative">
                   <div class="img-col position-relative overflow-hidden">
-                    <img src="../images/F Rods/R1.png" class="w-100" />
+                    <img src="../images/<?php echo $row["gambar"]; ?>" class="w-100" />
                   </div>
                 </div>
                 <div class="text-center">
-                  <p class="text-capitalize my-1">gray shirt</p>
-                  <span class="fw-bold d-block">$ 45.50</span>
+                  <p class="text-capitalize my-1"><?= $row["nama"]; ?></p>
+                  <span class="fw-bold d-block"><?= $row["harga"]; ?></span>
                   <a href="#" class="btn btn-primary mt-3 mb-4">Add to Cart</a>
                 </div>
               </div>
             </div>
-
-            <div class="col-md-6 col-lg-4 col-xl-3 p-2 best">
-              <div class="border">
-                <div class="collection-img position-relative">
-                  <div class="img-col position-relative overflow-hidden">
-                    <img src="../images/F Rods/R5.png" class="w-100" />
-                  </div>
-                </div>
-                <div class="text-center">
-                  <p class="text-capitalize my-1">gray shirt</p>
-                  <span class="fw-bold d-block">$ 45.50</span>
-                  <a href="#" class="btn btn-primary mt-3 mb-4">Add to Cart</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 col-xl-3 p-2 best">
-              <div class="border">
-                <div class="collection-img position-relative">
-                  <div class="img-col position-relative overflow-hidden">
-                    <img src="../images/F Rods/R4.png" class="w-100" />
-                  </div>
-                </div>
-                <div class="text-center">
-                  <p class="text-capitalize my-1">gray shirt</p>
-                  <span class="fw-bold d-block">$ 45.50</span>
-                  <a href="#" class="btn btn-primary mt-3 mb-4">Add to Cart</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 col-xl-3 p-2 reels">
-              <div class="border">
-                <div class="collection-img position-relative">
-                  <div class="img-col position-relative overflow-hidden">
-                    <img src="../images/F Reels/RE3.png" class="w-100" />
-                  </div>
-                </div>
-                <div class="text-center">
-                  <p class="text-capitalize my-1">gray shirt</p>
-                  <span class="fw-bold d-block">$ 45.50</span>
-                  <a href="#" class="btn btn-primary mt-3 mb-4">Add to Cart</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 col-xl-3 p-2 reels">
-              <div class="border">
-                <div class="collection-img position-relative">
-                  <div class="img-col position-relative overflow-hidden">
-                    <img src="../images/F Reels/RE7.png" class="w-100" />
-                  </div>
-                </div>
-                <div class="text-center">
-                  <p class="text-capitalize my-1">gray shirt</p>
-                  <span class="fw-bold d-block">$ 45.50</span>
-                  <a href="#" class="btn btn-primary mt-3 mb-4">Add to Cart</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 col-xl-3 p-2 reels">
-              <div class="border">
-                <div class="collection-img position-relative">
-                  <div class="img-col position-relative overflow-hidden">
-                    <img src="../images/F Reels/RE9.png" class="w-100" />
-                  </div>
-                </div>
-                <div class="text-center">
-                  <p class="text-capitalize my-1">gray shirt</p>
-                  <span class="fw-bold d-block">$ 45.50</span>
-                  <a href="#" class="btn btn-primary mt-3 mb-4">Add to Cart</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 col-xl-3 p-2 float">
-              <div class="border">
-                <div class="collection-img position-relative">
-                  <div class="img-col position-relative overflow-hidden">
-                    <img src="../images/F Float/F1.png" class="w-100" />
-                  </div>
-                </div>
-                <div class="text-center">
-                  <p class="text-capitalize my-1">gray shirt</p>
-                  <span class="fw-bold d-block">$ 45.50</span>
-                  <a href="#" class="btn btn-primary mt-3 mb-4">Add to Cart</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 col-xl-3 p-2 float">
-              <div class="border">
-                <div class="collection-img position-relative">
-                  <div class="img-col position-relative overflow-hidden">
-                    <img src="../images/F Float/F4.png" class="w-100" />
-                  </div>
-                </div>
-                <div class="text-center">
-                  <p class="text-capitalize my-1">gray shirt</p>
-                  <span class="fw-bold d-block">$ 45.50</span>
-                  <a href="#" class="btn btn-primary mt-3 mb-4">Add to Cart</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 col-xl-3 p-2 float">
-              <div class="border">
-                <div class="collection-img position-relative">
-                  <div class="img-col position-relative overflow-hidden">
-                    <img src="../images/F Float/F7.png" class="w-100" />
-                  </div>
-                </div>
-                <div class="text-center">
-                  <p class="text-capitalize my-1">gray shirt</p>
-                  <span class="fw-bold d-block">$ 45.50</span>
-                  <a href="#" class="btn btn-primary mt-3 mb-4">Add to Cart</a>
-                </div>
-              </div>
-            </div>
-          </div>
+          <?php endforeach; ?>
         </div>
       </div>
-    </section>
-    <!-- end of collection -->
+    </div>
+  </section>
+  <!-- end of collection -->
 
     <!-- jquery -->
     <script src="../js/jquery-3.6.0.js"></script>

@@ -102,14 +102,14 @@ session_start();
         <div class="text-center carousel-item active">
           <h2 class="text-capitalize text-black">Rental Pancing Terbaik</h2>
           <h1 class="text-uppercase py-2 fw-bold text-black">Mancing Rent</h1>
-          <a href="#" class="btn mt-3 text-uppercase">rent now</a>
+          <a href="product.php" class="btn mt-3 text-uppercase">rent now</a>
         </div>
         <div class="text-center carousel-item">
           <h2 class="text-capitalize text-black">Terjamin</h2>
           <h1 class="text-uppercase py-2 fw-bold text-black">
             Harga Bersahabat
           </h1>
-          <a href="#" class="btn mt-3 text-uppercase">rent now</a>
+          <a href="product.php" class="btn mt-3 text-uppercase">rent now</a>
         </div>
       </div>
 

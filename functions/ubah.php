@@ -1,15 +1,16 @@
 <?php
 $conn = mysqli_connect("localhost", "root", "", "mancing_rent");
 
-function tambah($data) {
+function ubah($data) {
     global $conn;
 
+    $id = $data["id"];
     $nama = htmlspecialchars($data["nama"]);
     $harga = htmlspecialchars($data["harga"]);
     $kategori = htmlspecialchars($data["kategori"]);
     $gambar = htmlspecialchars($data["gambar"]);
 
-    $query = "INSERT INTO product (nama, harga, kategori, gambar) VALUES ('$nama', '$harga', '$kategori', '$gambar')";
+    $query = "UPDATE product SET nama = '$nama', harga = '$harga', kategori = '$kategori', gambar = '$gambar' WHERE id = $id ";
 
     mysqli_query($conn, $query);
 

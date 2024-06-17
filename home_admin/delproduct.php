@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id = $_POST['id'];
 
     if (hapus($id) > 0) {
-        header("Location: admin.php");
+        header("Location: del.php");
     } else {
         echo "Error: Unable to delete the product.";
     }

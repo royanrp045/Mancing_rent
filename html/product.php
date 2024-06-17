@@ -9,7 +9,7 @@ $product = query("SELECT * FROM product")
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
+    <title>Mancing Rent</title>
     <!-- fontawesome cdn -->
     <link
       rel="stylesheet"
@@ -23,6 +23,11 @@ $product = query("SELECT * FROM product")
       rel="stylesheet"
       href="../bootstrap-5.0.2-dist/css/bootstrap.min.css"
     />
+    <style>
+      .container h2 {
+        color: #fff;
+      }
+    </style>
     <!-- custom css -->
     <link rel="stylesheet" href="../css/main.css" />
   </head>
@@ -85,7 +90,7 @@ $product = query("SELECT * FROM product")
                     <a class="nav-link active text-uppercase text-dark" href="product.php">product</a>
                 </li>
                 <li class="nav-item px-3 py-2">
-                    <a class="nav-link text-uppercase text-dark" href="#special">about</a>
+                    <a class="nav-link text-uppercase text-dark" href="about.php">about</a>
                 </li>
             </ul>
         </div>
@@ -96,6 +101,7 @@ $product = query("SELECT * FROM product")
     <!-- collection -->
   <section id="collection" class="py-5">
     <div class="container">
+    <h2>|</h2>
       <div class="row g-0">
         <div class="d-flex flex-wrap justify-content-center mt-5 filter-button-group">
           <button type="button" class="btn m-2 text-dark active-filter-btn" data-filter="*">All</button>
@@ -134,5 +140,10 @@ $product = query("SELECT * FROM product")
     <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
     <!-- custom js -->
     <script src="../js/script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

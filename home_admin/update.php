@@ -1,29 +1,26 @@
 <?php
 require '../functions/ubah.php';
 
-// Ambil data ID dari parameter URL
 $id = $_GET["id"];
 
-$product = query("SELECT * FROM product WHERE id = $id");
-var_dump($product);
+if( isset($_POST["submit"]) ) {
+	
+	if( ubah($_POST) > 0 ) {
+		echo "
+			<script>
+				alert('data berhasil diubah!');
+				document.location.href = 'del.php';
+			</script>
+		";
+	} else {
+		echo "
+			<script>
+				alert('data gagal diubah!');
+				document.location.href = 'del.php';
+			</script>
+		";
+	}
 
-// Proses update data jika tombol submit ditekan
-if (isset($_POST["submit"])) {
-    if (ubah($_POST) > 0) {
-        echo "
-        <script>
-            alert('Data berhasil diupdate');
-            document.location.href = 'del.php';
-        </script>
-        ";
-    } else {
-        echo "
-        <script>
-            alert('Data gagal diupdate');
-            document.location.href = 'update.php?id=$id';
-        </script>
-        ";
-    }
 }
 ?>
 
@@ -41,7 +38,7 @@ if (isset($_POST["submit"])) {
         <ul>
             <li>
                 <label for="nama">Nama: </label>
-                <input type="text" name="nama" id="nama">
+                <input type="text" name="nama" id="nama" value="<?= $mhs["nama"]; ?>">
             </li>
             <li>
                 <label for="harga">Harga: </label>

@@ -67,8 +67,50 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <nav class="navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
     <div class="container">
         <a class="navbar-brand d-flex justify-content-between align-items-center order-lg-0" href="index.html">
-            <span class="text-uppercase fw-lighter ms-2">Admin Panel</span>
+            <span class="text-uppercase fw-lighter ms-2">Admin</span>
         </a>
+
+        <!-- Tombol-tombol -->
+        <div class="order-lg-2 nav-btns">
+            <?php
+            session_start();
+            ?>
+            <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true): ?>
+                <!-- Jika sudah login -->
+                <div class="btn-group d-flex align-items-center">
+                    <div class="welcome-text me-2">Welcome, <?php echo $_SESSION['username']; ?></div>
+                    <form action="../functions/logout.php" method="post">
+                        <button type="submit" class="btn position-relative">
+                    <a class="btn text-uppercase">Logout</a>
+                </button>
+                    </form>
+                </div>
+            <?php else: ?>
+                <button type="button" class="btn position-relative">
+                    <a href="login.php" class="btn text-uppercase">Login</a>
+                </button>
+            <?php endif; ?>
+        </div>
+
+        <!-- Toggler button untuk mobile -->
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Daftar menu -->
+        <div class="collapse navbar-collapse order-lg-1" id="navMenu">
+            <ul class="navbar-nav mx-auto text-center">
+                <li class="nav-item px-3 py-2">
+                    <a class="nav-link text-uppercase text-dark" href="add.php">Tambah Produk</a>
+                </li>
+                <li class="nav-item px-3 py-2">
+                    <a class="nav-link active text-uppercase text-dark" href="del.php">Manage Produk</a>
+                </li>
+                <li class="nav-item px-3 py-2">
+                    <a class="nav-link text-uppercase text-dark" href="#">Pesanan</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
 

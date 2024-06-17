@@ -83,7 +83,7 @@ session_start();
                     <a class="nav-link text-uppercase text-dark" href="product.php">product</a>
                 </li>
                 <li class="nav-item px-3 py-2">
-                    <a class="nav-link text-uppercase text-dark" href="#special">about</a>
+                    <a class="nav-link text-uppercase text-dark" href="about.php">about</a>
                 </li>
             </ul>
         </div>
@@ -188,6 +188,198 @@ session_start();
     </section>
     <!-- end of special products -->
 
+      <!-- blogs -->
+      <section id = "offers" class = "py-5">
+        <div class = "container">
+            <div class = "row d-flex align-items-center justify-content-center text-center justify-content-lg-start text-lg-start">
+                <div class = "offers-content">
+                    <span class = "text-white">Tempat kami terjamin</span>
+                    <h2 class = "mt-2 mb-4 text-white">100% Lebih Murah !!!</h2>
+                    <a href = "#" class = "btn">Rent Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of blogs -->
+
+    <section id = "sec-5" class = "py-5">
+        <div class = "container my-4">
+            <div class = "row mb-5">
+                <div class = "col text-center">
+                <div class="title text-center">
+          <h2 class="position-relative d-inline-block">Video Promosi</h2>
+        </div>
+                    <p class = "lh-lg fw-light pt-2 w-75 mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, alias a natus deleniti neque ad cupiditate dicta explicabo nemo vel?</p>
+                </div>
+            </div>
+
+            <div class = "row">
+                <video controls>
+                    <source src = "../images/video.mp4" type = "video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id = "sec-3" class = "py-5 text-black">
+           <div class = "container my-4">
+               <div class = "row mb-5">
+                   <div class = "col text-center">
+                   <div class="title text-center">
+                        <h2 class="position-relative d-inline-block">Pengalaman</h2>
+                    </div>
+                       <p class = "lh-lg fw-light pt-2 w-75 mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, alias a natus deleniti neque ad cupiditate dicta explicabo nemo vel?</p>
+                   </div>
+               </div>
+               <div class = "row">
+                   <div class = "col-lg-6 text-center text-sm-start mb-4">
+                       <div class = "row">
+                            <div class = "col-sm-2 d-sm-flex justify-content-sm-end">
+                                <span class = "d-flex align-items-center justify-content-center circle-icon bg-white text-green mx-sm-0 mx-auto mb-4">
+                                    <i class = "fa fa-dot-circle fs-2"></i>
+                                </span>
+                            </div>
+                            <div class = "col-sm-10">
+                                <h4>100% Vectors</h4>
+                                <p class = "lh-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores voluptatum ab a inventore neque. Tempora?</p>
+                            </div>
+                       </div>
+                   </div>
+
+                   <div class = "col-lg-6 text-center text-sm-start mb-4">
+                       <div class = "row">
+                            <div class = "col-sm-2 d-sm-flex justify-content-sm-end">
+                                <span class = "d-flex align-items-center justify-content-center circle-icon bg-white text-green mx-sm-0 mx-auto mb-4">
+                                    <i class = "fa fa-cog fs-2"></i>
+                                </span>
+                            </div>
+                            <div class = "col-sm-10">
+                                <h4>Preference Panel</h4>
+                                <p class = "lh-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores voluptatum ab a inventore neque. Tempora?</p>
+                            </div>
+                       </div>
+                   </div>
+
+                   <div class = "col-lg-6 text-center text-sm-start mb-4">
+                       <div class = "row">
+                            <div class = "col-sm-2 d-sm-flex justify-content-sm-end">
+                                <span class = "d-flex align-items-center justify-content-center circle-icon bg-white text-green mx-sm-0 mx-auto mb-4">
+                                    <i class = "fa fa-tv fs-2"></i>
+                                </span>
+                            </div>
+                            <div class = "col-sm-10">
+                                <h4>Retina Ready</h4>
+                                <p class = "lh-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores voluptatum ab a inventore neque. Tempora?</p>
+                            </div>
+                       </div>
+                   </div>
+
+                   <div class = "col-lg-6 text-center text-sm-start mb-4">
+                       <div class = "row">
+                            <div class = "col-sm-2 d-sm-flex justify-content-sm-end">
+                                <span class = "d-flex align-items-center justify-content-center circle-icon bg-white text-green mx-sm-0 mx-auto mb-4">
+                                    <i class = "fa fa-crop fs-2"></i>
+                                </span>
+                            </div>
+                            <div class = "col-sm-10">
+                                <h4>Pixel Perfect</h4>
+                                <p class = "lh-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores voluptatum ab a inventore neque. Tempora?</p>
+                            </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </section>
+
+    <!-- footer -->
+    <footer class = "bg-dark py-5 mt-5">
+        <div class = "container">
+            <div class = "row text-white g-4">
+                <div class = "col-md-6 col-lg-3">
+                    <a class = "text-uppercase text-decoration-none brand text-white" href = "#header">Mancing Rent</a>
+                    <p class = "text-white text-muted mt-3">Mancing rent adalah tempat persewaan alat alat pancing terlengkap termurah terbest pokoknya, harga dijamin lebih murah dari yang lain.</p>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light">Links</h5>
+                    <ul class = "list-unstyled">
+                        <li class = "my-3">
+                            <a href = "#header" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Home
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "product.php" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> Product
+                            </a>
+                        </li>
+                        <li class = "my-3">
+                            <a href = "about.php" class = "text-white text-decoration-none text-muted">
+                                <i class = "fas fa-chevron-right me-1"></i> About
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light mb-3">Contact Us</h5>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-map-marked-alt"></i>
+                        </span>
+                        <span class = "fw-light">
+                            Yogyakarta, Indonesia
+                        </span>
+                    </div>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-envelope"></i>
+                        </span>
+                        <span class = "fw-light">
+                            royanpalingganteng@gmail.com
+                        </span>
+                    </div>
+                    <div class = "d-flex justify-content-start align-items-start my-2 text-muted">
+                        <span class = "me-3">
+                            <i class = "fas fa-phone-alt"></i>
+                        </span>
+                        <span class = "fw-light">
+                            +62 987 6321 4578
+                        </span>
+                    </div>
+                </div>
+
+                <div class = "col-md-6 col-lg-3">
+                    <h5 class = "fw-light mb-3">Follow Us</h5>
+                    <div>
+                        <ul class = "list-unstyled d-flex">
+                            <li>
+                                <a href = "#" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "#" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href = "#" class = "text-white text-decoration-none text-muted fs-4 me-4">
+                                    <i class = "fab fa-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end of footer -->
+
+    
+    <script src = "bootstrap/js/bootstrap.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

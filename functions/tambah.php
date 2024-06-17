@@ -7,7 +7,13 @@ function tambah($data) {
     $nama = htmlspecialchars($data["nama"]);
     $harga = htmlspecialchars($data["harga"]);
     $kategori = htmlspecialchars($data["kategori"]);
-    $gambar = htmlspecialchars($data["gambar"]);
+
+
+	// upload gambar
+	$gambar = upload();
+	if( !$gambar ) {
+		return false;
+	}
 
     $query = "INSERT INTO product (nama, harga, kategori, gambar) VALUES ('$nama', '$harga', '$kategori', '$gambar')";
 

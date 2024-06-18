@@ -46,7 +46,7 @@ session_start();
                     <a class="btn text-uppercase">Logout</a>
                 </button>
                     </form>
-                    <button type="button" class="btn position-relative">
+                    <button type="button" class="btn position-relative" onclick="window.location.href='cart.php'">
                         <i class="fa fa-shopping-cart"></i>
                         <span class="position-absolute top-0 start-100 translate-middle badge bg-primary">5</span>
                     </button>
@@ -58,7 +58,7 @@ session_start();
                 <button type="button" class="btn position-relative">
                     <a href="login.php" class="btn text-uppercase">Login</a>
                 </button>
-                <button type="button" class="btn position-relative">
+                <button type="button" class="btn position-relative" onclick="window.location.href='cart.php'">
                     <i class="fa fa-shopping-cart"></i>
                     <span class="position-absolute top-0 start-100 translate-middle badge bg-primary">5</span>
                 </button>
@@ -145,7 +145,7 @@ session_start();
               <img src="../images/image 8.png" class="w-100" />
             </div>
             <div class="text-center">
-              <p class="text-capitalize mt-3 mb-1">gray shirt</p>
+              <p class="text-capitalize mt-3 mb-1">Pancing</p>
               <span class="fw-bold d-block">$ 45.50</span>
               <a href="#" class="btn btn-primary mt-3">Add to Cart</a>
             </div>
@@ -156,7 +156,7 @@ session_start();
               <img src="../images/gulungan.png" class="w-100" />
             </div>
             <div class="text-center">
-              <p class="text-capitalize mt-3 mb-1">gray shirt</p>
+              <p class="text-capitalize mt-3 mb-1">Kolor</p>
               <span class="fw-bold d-block">$ 45.50</span>
               <a href="#" class="btn btn-primary mt-3">Add to Cart</a>
             </div>
@@ -167,7 +167,7 @@ session_start();
               <img src="../images/tas.png" class="w-100" />
             </div>
             <div class="text-center">
-              <p class="text-capitalize mt-3 mb-1">gray shirt</p>
+              <p class="text-capitalize mt-3 mb-1">Tas</p>
               <span class="fw-bold d-block">$ 45.50</span>
               <a href="#" class="btn btn-primary mt-3">Add to Cart</a>
             </div>
@@ -178,7 +178,7 @@ session_start();
               <img src="../images/kursi.png" class="w-100" />
             </div>
             <div class="text-center">
-              <p class="text-capitalize mt-3 mb-1">gray shirt</p>
+              <p class="text-capitalize mt-3 mb-1">Kursi</p>
               <span class="fw-bold d-block">$ 45.50</span>
               <a href="#" class="btn btn-primary mt-3">Add to Cart</a>
             </div>

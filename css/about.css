@@ -52,7 +52,6 @@ body {
 .nav-item .active {
   color: var(--blue) !important;
 }
-
 .welcome-text {
   margin-right: 10px;
   line-height: 35px;
@@ -82,6 +81,11 @@ body {
 
 #header span {
   font-size: 20px;
+}
+
+.btn-cart {
+  background-color: #fff;
+  border-color: #0395c8;
 }
 
 /* Kepuasan */

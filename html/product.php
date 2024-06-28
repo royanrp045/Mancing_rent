@@ -41,9 +41,6 @@ $product = query("SELECT * FROM product")
 
         <!-- Tombol-tombol -->
         <div class="order-lg-2 nav-btns">
-            <?php
-            session_start();
-            ?>
             <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true): ?>
                 <!-- Jika sudah login -->
                 <div class="btn-group d-flex align-items-center">

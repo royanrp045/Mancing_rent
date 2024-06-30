@@ -78,28 +78,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <span class="text-uppercase fw-lighter ms-2">Admin</span>
         </a>
 
-        <!-- Tombol-tombol -->
-        <div class="order-lg-2 nav-btns">
-            <?php
-            session_start();
-            ?>
-            <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true): ?>
-                <!-- Jika sudah login -->
-                <div class="btn-group d-flex align-items-center">
-                    <div class="welcome-text me-2">Welcome, <?php echo $_SESSION['username']; ?></div>
-                    <form action="../functions/logout.php" method="post">
-                        <button type="submit" class="btn position-relative">
-                    <a class="btn text-uppercase">Logout</a>
-                </button>
-                    </form>
-                </div>
-            <?php else: ?>
-                <button type="button" class="btn position-relative">
-                    <a href="login.php" class="btn text-uppercase">Login</a>
-                </button>
-            <?php endif; ?>
-        </div>
-
         <!-- Toggler button untuk mobile -->
         <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
             <span class="navbar-toggler-icon"></span>

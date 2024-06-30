@@ -21,14 +21,18 @@ if (isset($_POST["login"])) {
     $email = $_POST["email"];
     $password = $_POST["password"];
 
+    // Pastikan untuk menyertakan koneksi database
+    require '../functions/connect.php';
+    
     $result = mysqli_query($conn, "SELECT * FROM user WHERE email = '$email'");
 
     if (mysqli_num_rows($result) === 1) {
         $row = mysqli_fetch_assoc($result);
         if (password_verify($password, $row["password"])) {
-          $_SESSION['logged_in'] = true;
-          $_SESSION['username'] = $row['username']; // Sesuaikan dengan kolom nama pengguna di tabel Anda
-          header("location: index.php");
+            $_SESSION['logged_in'] = true;
+            $_SESSION['username'] = $row['username'];
+            $_SESSION['user_id'] = $row['id']; // Memperbaiki bagian ini
+            header("location: index.php");
             exit;
         } else {
             $password_error = "Password salah!";
@@ -36,7 +40,7 @@ if (isset($_POST["login"])) {
     } else {
         $email_error = "Email tidak ditemukan!";
     }
-  }
+}
 ?>
 
 <!DOCTYPE html>

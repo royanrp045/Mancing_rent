@@ -69,9 +69,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['product_id'])) {
                         </button>
                     </form>
                     <button type="button" class="btn position-relative" onclick="window.location.href='cart.php'">
-                        <i class="fa fa-shopping-cart"></i>
-                        <span class="position-absolute top-0 start-100 translate-middle badge bg-primary">5</span>
-                    </button>
+                    <i href="cart.php" class="fa fa-shopping-cart"></i>
+                </button>
                     <button type="button" class="btn position-relative">
                         <i class="fa fa-search"></i>
                     </button>
@@ -82,7 +81,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['product_id'])) {
                 </button>
                 <button type="button" class="btn position-relative" onclick="window.location.href='cart.php'">
                     <i href="cart.php" class="fa fa-shopping-cart"></i>
-                    <span class="position-absolute top-0 start-100 translate-middle badge bg-primary">5</span>
                 </button>
                 <button type="button" class="btn position-relative">
                     <i class="fa fa-search"></i>

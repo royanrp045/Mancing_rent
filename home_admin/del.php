@@ -31,6 +31,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         .container h2 {
             color: #f8f9fa;
         }
+
+        .table thead th {
+            background-color: #0395c8;
+            color: #fff;
+        }
         .table th, .table td {
             vertical-align: middle;
         }
@@ -82,7 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <a class="nav-link active text-uppercase text-dark" href="del.php">Manage Produk</a>
                 </li>
                 <li class="nav-item px-3 py-2">
-                    <a class="nav-link text-uppercase text-dark" href="#">Pesanan</a>
+                    <a class="nav-link text-uppercase text-dark" href="pesanan.php">Pesanan</a>
                 </li>
             </ul>
         </div>
@@ -108,7 +113,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <?php $i = 1; ?>
                     <?php foreach ($products as $product) : ?>
                         <tr>
-                            <td><?= $product["id"]; ?></td>
+                            <td><?= $i; ?></td>
                             <td><?= $product["nama"]; ?></td>
                             <td>Rp <?= number_format($product["harga"], 0, ',', '.'); ?></td>
                             <td><?= $product["kategori"]; ?></td>
@@ -122,6 +127,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 </a>
                             </td>
                         </tr>
+                        <?php $i++ ?>
                     <?php endforeach; ?>
                 </tbody>
             </table>

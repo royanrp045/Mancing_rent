@@ -1,6 +1,4 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 session_start();
 
 // Koneksi ke database
@@ -58,7 +56,6 @@ $cart_items = fetch_cart_items($user_id, $conn);
     <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/about.css" />
     <style>
-        /* Tambahkan gaya kustom di sini */
         .cart-item img {
             max-height: 100px;
             width: 100px;
@@ -126,7 +123,7 @@ $cart_items = fetch_cart_items($user_id, $conn);
                     <a class="nav-link text-uppercase text-dark" href="index.php">home</a>
                 </li>
                 <li class="nav-item px-3 py-2">
-                    <a class="nav-link active text-uppercase text-dark" href="product.php">product</a>
+                    <a class="nav-link text-uppercase text-dark" href="product.php">product</a>
                 </li>
                 <li class="nav-item px-3 py-2">
                     <a class="nav-link text-uppercase text-dark" href="about.php">about</a>
@@ -168,11 +165,11 @@ $cart_items = fetch_cart_items($user_id, $conn);
                         <option value="5000">Cod - Rp 5.000</option>
                     </select>
                 </p>
+                <form action="../functions/checkout.php" method="post">
                 <p>
                     Alamat <input type="text" class="form-control" name="address" placeholder="Enter your address"/>
                 </p>
                 <p>Total Price: <span id="total-price"></span></p>
-                <form action="../functions/checkout.php" method="post">
                     <input type="hidden" name="total_price" id="hidden-total-price" value="">
                     <input type="hidden" name="shipping_cost" id="hidden-shipping-cost" value="">
                     <button type="submit" class="btn btn-dark w-100">CHECKOUT</button>

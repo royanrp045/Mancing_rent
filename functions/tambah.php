@@ -15,6 +15,7 @@ function tambah($data) {
 		return false;
 	}
 
+    $gambar = "../images/" . $gambar;
     $query = "INSERT INTO product (nama, harga, kategori, gambar) VALUES ('$nama', '$harga', '$kategori', '$gambar')";
 
     mysqli_query($conn, $query);

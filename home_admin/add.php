@@ -54,6 +54,31 @@ if (isset($_POST["submit"])) {
         .navbar {
             margin-bottom: 30px;
         }
+        /* Styling for dropdown */
+        .custom-select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-color: #fff;
+            border: 1px solid #ced4da;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            cursor: pointer;
+        }
+        .custom-select:focus {
+            border-color: #007bff;
+            outline: 0;
+            box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+        }
+        .custom-select::after {
+            content: '\25BC';
+            position: absolute;
+            top: 50%;
+            right: 1rem;
+            transform: translateY(-50%);
+            pointer-events: none;
+        }
     </style>
 </head>
 <body>
@@ -78,7 +103,7 @@ if (isset($_POST["submit"])) {
                     <a class="nav-link text-uppercase text-dark" href="del.php">Manage Produk</a>
                 </li>
                 <li class="nav-item px-3 py-2">
-                    <a class="nav-link text-uppercase text-dark" href="#">Pesanan</a>
+                    <a class="nav-link text-uppercase text-dark" href="pesanan.php">Pesanan</a>
                 </li>
             </ul>
         </div>
@@ -95,11 +120,16 @@ if (isset($_POST["submit"])) {
         </div>
         <div class="mb-3">
             <label for="harga" class="form-label">Harga:</label>
-            <input type="text" name="harga" id="harga" class="form-control" required>
+            <input type="number" name="harga" id="harga" class="form-control" required>
         </div>
         <div class="mb-3">
             <label for="kategori" class="form-label">Kategori:</label>
-            <input type="text" name="kategori" id="kategori" class="form-control" required>
+            <select name="kategori" id="kategori" class="form-select custom-select" required>
+                <option selected disabled>Pilih Kategori</option>
+                <option value="float">Float</option>
+                <option value="rods">Rods</option>
+                <option value="reels">Reels</option>
+            </select>
         </div>
         <div class="mb-3">
             <label for="gambar" class="form-label">Gambar:</label>

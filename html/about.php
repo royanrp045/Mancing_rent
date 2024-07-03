@@ -51,9 +51,8 @@ require '../functions/connect.php';
                     <a class="btn text-uppercase">Logout</a>
                 </button>
                     </form>
-                    <button type="button" class="btn position-relative">
-                        <i class="fa fa-shopping-cart"></i>
-                        <span class="position-absolute top-0 start-100 translate-middle badge bg-primary">5</span>
+                    <button type="button" class="btn position-relative" onclick="window.location.href='cart.php'">
+                        <i href="cart.php" class="fa fa-shopping-cart"></i>
                     </button>
                     <button type="button" class="btn position-relative">
                         <i class="fa fa-search"></i>
@@ -63,9 +62,8 @@ require '../functions/connect.php';
                 <button type="button" class="btn position-relative">
                     <a href="login.php" class="btn text-uppercase">Login</a>
                 </button>
-                <button type="button" class="btn position-relative">
-                    <i class="fa fa-shopping-cart"></i>
-                    <span class="position-absolute top-0 start-100 translate-middle badge bg-primary">5</span>
+                <button type="button" class="btn position-relative" onclick="window.location.href='cart.php'">
+                    <i href="cart.php" class="fa fa-shopping-cart"></i>
                 </button>
                 <button type="button" class="btn position-relative">
                     <i class="fa fa-search"></i>

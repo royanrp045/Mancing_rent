@@ -28,8 +28,8 @@ foreach ($cart_items as $item) {
     $quantity = $item['quantity'];
 
     // Insert data ke tabel checkout
-    $query = "INSERT INTO checkout (user_id, product_id, quantity, total_price, shipping_cost, address, checkout_date) 
-              VALUES ('$user_id', '$product_id', '$quantity', '$total_price', '$shipping_cost', '$address', NOW())";
+    $query = "INSERT INTO checkout (user_id, product_id, quantity, total_price, shipping_cost, address, checkout_date, status) 
+              VALUES ('$user_id', '$product_id', '$quantity', '$total_price', '$shipping_cost', '$address', NOW(), 'pending')";
     
     $result = mysqli_query($conn, $query);
 
@@ -50,7 +50,7 @@ if (!$result) {
 mysqli_close($conn);
 
 // Redirect ke halaman sukses atau halaman lain
-header("Location: success.php");
+header("Location: ../html/product.php");
 exit();
 
 // Fungsi untuk mengambil item dari keranjang belanja

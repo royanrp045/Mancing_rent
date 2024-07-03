@@ -1,15 +1,32 @@
 <?php
 require '../functions/connect.php';
+require '../functions/upload.php';
 
 $id = $_GET['id'];
-
 $product = query("SELECT * FROM product WHERE id = $id")[0];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nama = $_POST['nama'];
     $harga = $_POST['harga'];
     $kategori = $_POST['kategori'];
-    $gambar = $_POST['gambar'];
+    $gambarLama = $_POST['gambarLama'];
+
+    // Check if a new image is uploaded
+    if ($_FILES['gambar']['error'] === 4) {
+        $gambar = $gambarLama;
+    } else {
+        $gambar = upload();
+        if ($gambar) {
+            // Delete old image if upload is successful
+            if (file_exists("../images/$gambarLama")) {
+                unlink("../images/$gambarLama");
+            }
+        } else {
+            // Handle upload error
+            echo "Upload gambar gagal.";
+            return false;
+        }
+    }
 
     $query = "UPDATE product SET 
               nama = '$nama', 
@@ -69,6 +86,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         .navbar {
             margin-bottom: 30px;
         }
+        .img {
+            max-height: 100px;
+            width: 100px;
+            object-fit: contain;
+        }
+        .img-preview {
+            max-width: 200px;
+            max-height: 200px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
     </style>
 </head>
 <body>
@@ -118,14 +147,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
         <div class="mb-3">
             <label for="gambar" class="form-label">Gambar:</label>
-            <input type="text" name="gambar" id="gambar" class="form-control" value="<?= htmlspecialchars($product['gambar']); ?>" required>
+            <input type="file" name="gambar" id="gambar" class="form-control" onchange="previewImage(event)">
+            <input type="hidden" name="gambarLama" value="<?= htmlspecialchars($product['gambar']); ?>">
+            <img id="preview" src="../images/<?= $product['gambar']; ?>" class="img-preview">
         </div>
         <button type="submit" class="btn btn-primary">Update</button>
-        <button href="del.php" class="btn btn-secondary">Batal</button>
+        <a href="del.php" class="btn btn-secondary">Batal</a>
     </form>
 </div>
 
 <script src="../bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+<script>
+function previewImage(event) {
+    var reader = new FileReader();
+    reader.onload = function(){
+        var output = document.getElementById('preview');
+        output.src = reader.result;
+    }
+    reader.readAsDataURL(event.target.files[0]);
+}
+</script>
 </body>
 </html>
-
